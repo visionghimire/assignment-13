@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title> LifeInWeeks </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(aa.jpg)">
+  <div class="container-fluid" align="center" >
+  	<h1 class="pb-2"> Enter Your Age </h1>
+    <input type="number" id="ur_age" placeholder="Enter Your Age" > <br> <br>
+    <button class="btn" type="button" onclick="age_calc()" >Calculate</button>
+    <button class="btn" type="button" onclick="refresh()" >Refresh</button> <br> <br>
+    <p class="h1" id="result"></p>
+  </div>
+</body>
+<script>
+  function age_calc() {
+  var ur_age = document.getElementById("ur_age").value;  
+  var days = parseInt((90 - ur_age )* 365);
+  var weeks = parseInt((90- ur_age) * 52);
+  var months = parseInt((90 - ur_age)*12);
+	 if(ur_age > 0 && ur_age <= 90){
+	var result = "You have " + days + " days, " + weeks + " weeks, " + months + " months left.";
+    document.getElementById("result").innerHTML = result;
+    }
+    else{
+    	
+    	var result = "Please Enter less than age 90.";
+    	document.getElementById("result").innerHTML = result;
+    }
+}
+</script>
+<script type="text/javascript">
+	function refresh(){
+		location.reload();
+	}
+</script>
+</html>

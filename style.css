@@ -1,0 +1,27 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1{
+  font-family: "Montserrat-Bold";
+  color: #03506F;
+}
+p.h1 {
+  color: #00B7C2;
+  padding-top: 50px;
+}
+.btn{
+	font-family: "Georgia";
+	color: #E8E8E8;
+	background-color: #30475E;
+}
+.container-fluid{
+  padding: 7% 15%;
+}
+input{
+	font-family: "Arial";
+	font-style: italic;
+	text-align: center;
+
+}
